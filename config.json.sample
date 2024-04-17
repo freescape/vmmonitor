@@ -4,12 +4,13 @@
         "port": 10000,
         "certificate": {
             "path": "path.to.crt",
-            "keyPath": "path.to.key"
+            "keyPath": "path.to.key",
+            "password": ""
         },
         "key": "PSK GOES HERE",
         "commandsEnabled" : {
             "wake": true,
-            "suspend": false,
+            "save": false,
             "start" : true,
             "stop" : false
         }

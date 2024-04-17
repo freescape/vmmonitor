@@ -14,7 +14,6 @@
 
 from threading import Thread
 import syslog
-
 import libvirt_monitor
 import mylog
 import confloader
