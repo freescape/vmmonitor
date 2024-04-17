@@ -1,0 +1,32 @@
+{
+    "listener":{
+        "enabled": true,
+        "port": 10000,
+        "certificate": {
+            "path": "path.to.crt",
+            "keyPath": "path.to.key"
+        },
+        "key": "PSK GOES HERE",
+        "commandsEnabled" : {
+            "wake": true,
+            "suspend": false,
+            "start" : true,
+            "stop" : false
+        }
+    },
+    "monitor": {
+        "enabled": true
+    },
+    "startup" : {
+        "enabled": true,
+        "vmStartupCommands": [
+            "start vm1",
+            "start vm2",
+            "delay 5",
+            "start vm3",
+            "start vm4",
+            "delay 5",
+            "start vm5"
+        ]
+    }
+ }

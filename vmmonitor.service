@@ -1,0 +1,18 @@
+[Unit]
+Description=Virtual Domain Event Monitor Service
+Wants=libvirtd.service
+After=network.target
+After=time-sync.target
+After=libvirtd.service
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5
+User=vmmonitor
+ExecStart=/usr/bin/python3 /opt/vmmonitor/vmmonitor.py
+TimeoutStopSec=20
+KillMode=control-group
+
+[Install]
+WantedBy=multi-user.target
