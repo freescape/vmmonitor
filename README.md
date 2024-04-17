@@ -20,9 +20,10 @@ Upon host reboot the script cannot run in time to collect events from domains th
 
 If enabled, "listener" will listen for https requests on given port to start/stop/save VMs.
 
-Pass via querystring three parameters:
-- key ( and pre-shared string key )
-- cmd [start|stop|save|wake]
+Accessed by a GET request passing via querystring three parameters:
+
+- key ( a pre-shared string key )
+- cmd ( [start|stop|save|wake] )
 - target ( target domain name )
 
 E.g.
