@@ -5,6 +5,7 @@
 - Automate domain starting to enable staggering VM launches with delays
 - Provide a simple https interface for starting/stopping/saving VMs
 
+This runs as a service on the host hypervisor.
 
 ## monitor
 
