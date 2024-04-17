@@ -52,3 +52,9 @@ Refer to the config sample for example.
 - Run the **install.sh** file in target directory
 - This will install the python script as a service and create a user to run as
 - Requires Python 3
+
+# Why
+
+I wrote this because I needed guest time to be synchronized quickly after VM restore from saved state. This can otherwise take minutes! This then required the addition of the startup functionality to allow handling of the host reboot case, which then enabled easy staggering of guest VM launching - a nice-to-have.
+
+I separately wanted scripts on some guests to be able to launch other VMs without having any particular permissions on the hypervisor that hosted them, leading to the addition of the https listener.
