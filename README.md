@@ -18,11 +18,12 @@ Upon host reboot the script cannot run in time to collect events from domains th
 
 ## listener
 
-If enabled, "listener" will listen for https requests on given port to start/stop/save VMs
+If enabled, "listener" will listen for https requests on given port to start/stop/save VMs.
+
 Pass via querystring three parameters:
-- key
-- cmd
-- target
+- key ( and pre-shared string key )
+- cmd [start|stop|save|wake]
+- target ( target domain name )
 
 E.g.
 > curl "https://yourkvmhost.tld:10000/?key=YOURPSK&cmd=start&target=VMNAME"
@@ -47,6 +48,7 @@ Refer to the config sample for example.
 # Install
 
 - Copy the files to a suitable destination (e.g. /opt/vmmonitor)
-- Run the **install.sh** file in there
-- Will install the python script as a service and create a user to run as
+- Use config.json.sample to create config.json and edit appropriately
+- Run the **install.sh** file in target directory
+- This will install the python script as a service and create a user to run as
 - Requires Python 3
