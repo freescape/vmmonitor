@@ -1,11 +1,11 @@
 
 # VMMonitor
-**A simple KVM/QEMU tool**
+**A simple KVM/QEMU tool written in Python**
 - Monitor for libvirt domain state changes to execute time sync immediately after domain is resumed
 - Automate domain starting to enable staggering VM launches with delays
 - Provide a simple https interface for starting/stopping/saving VMs
 
-This runs as a service on the host hypervisor.
+This runs as a service on the host hypervisor and requires Python 3.
 
 ## monitor
 
